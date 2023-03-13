@@ -1,46 +1,37 @@
-const form = document.querySelector('form');
+const button = document.querySelector('button');
 
-form.addEventListener('submit', (e) => {
-
+button.addEventListener('click', (e) => {
   e.preventDefault();
 
-  const formData = new FormData(form);
+  const data = {
+    // nama: document.getElementById('nama').value,
+    npm: document.getElementById('npm').value,
+    // url: document.getElementById('url').value,
+    // topik: document.getElementById('topik').value,
+    // abstrak: document.getElementById('abstrak').value,
+    tahun_id: document.getElementById('tahun_id').value,
+    judul: document.getElementById('judul').value,
+    prodi_id: document.getElementById('prodi_id').value,
+    partner: document.getElementById('partner').value,
+    tipe_bimbingan: document.getElementById('tipe_bimbingan').value,
+    pembimbing1: document.getElementById('pembimbing1').value,
+    pembimbing2: document.getElementById('pembimbing2').value
+  };
 
-  function isNumeric(str) {
-    if (typeof str != "string") return false // we only process strings!  
-    return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-           !isNaN(parseInt(str)) // ...and ensure strings of whitespace fail
-  }
-  
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-
-  var object = {};
-  formData.forEach(function(value, key){
-      isNumeric(object);
-      object[key] = parseInt(value);
-  });
 
   var requestOptions = {
     method: 'POST',
     headers: myHeaders,
-    body: JSON.stringify(object),
+    body: JSON.stringify(data),
     redirect: 'follow'
   };
 
   console.log(requestOptions);
 
-  fetch("https://hris_backend.ulbi.ac.id/gaji/peg", requestOptions)
-  .then(response => response.json())
-  .then(result => console.log(result), alert("data inserted"))
-  .catch(error => console.log('error', error));
-
-  document.getElementById('form').reset();
+  fetch("http://bimit-be.ulbi.ac.id/api/v1/create_bimbingan", requestOptions)
+    .then(response => response.json())
+    .then(result => console.log(result), alert("data inserted"))
+    .catch(error => console.log('error', error));
 })
-
-
-
-
-
-
-

@@ -22,24 +22,20 @@
         </div>
         <div class="container px-32 mx-auto">
           <div class="-mt-52 max-w-4xl mx-auto py-10  px-8 bg-white rounded-4xl shadow-lg">
-                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="name" placeholder="Nama Anda">
-                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="npm" placeholder="NPM">
-                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="judul" placeholder="Judul">
-                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="link" placeholder="Link URL Google Book atau Journal Publish">
-                <textarea id="message" rows="7" class="mb-6   px-12 block p-2.5 w-full text-sm text-blue-400 bg-blue-50 rounded-xl border border-blue-400 rounded-xl focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 dark:focus:border-blue-500" placeholder="Tulis Topik Anda di sini..."></textarea>
-                <textarea id="message" rows="7" class="mb-6   px-12 block p-2.5 w-full text-sm text-blue-400 bg-blue-50 rounded-xl border border-blue-400 rounded-xl focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 dark:focus:border-blue-500" placeholder="Tulis Abstrak Anda di sini..."></textarea>
-                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="pembimbing1" placeholder="Calon Pembimbing 1">
-                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="pembimbing2" placeholder="Calon Pembimbing 2">
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="npm" placeholder="npm">
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="tahun_id" placeholder="tahun id">
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="judul" placeholder="Judul">
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="prodi_id" placeholder="prodi id">
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="partner" placeholder="partner">
+
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="tipe_bimbingan" placeholder="tipe bimbingan">
+
+                <!-- <textarea  rows="7" class="mb-6   px-12 block p-2.5 w-full text-sm text-blue-400 bg-blue-50 rounded-xl border border-blue-400 rounded-xl focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 dark:focus:border-blue-500" type="text" id="topik" placeholder="Tulis Topik Anda di sini..."></textarea>
+                <textarea  rows="7" class="mb-6   px-12 block p-2.5 w-full text-sm text-blue-400 bg-blue-50 rounded-xl border border-blue-400 rounded-xl focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 dark:focus:border-blue-500" type="text" id="abstrak" placeholder="Tulis Abstrak Anda di sini..."></textarea> -->
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="pembimbing1" placeholder="Calon Pembimbing 1">
+                <input class="w-full mb-6 py-5 px-12 text-xl border-2 border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" type="text" id="pembimbing2" placeholder="Calon Pembimbing 2">
                 <button class="block py-5 px-10 mx-auto w-full md:max-w-max text-xl leading-6 text-white font-medium tracking-tighter font-heading text-center bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl" type="submit" value="Add Data" href="#">Daftarkan sekarang</button>
-                <button
-                type="button"
-                class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                data-te-toggle="modal"
-                data-te-target="#exampleModal"
-                data-te-ripple-init
-                data-te-ripple-color="light">
-                Daftar
-              </button>
+                
 
             </div>
         </div>
