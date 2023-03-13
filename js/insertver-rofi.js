@@ -25,6 +25,7 @@ var requestOptions = {
   body: JSON.stringify(object),
   redirect: 'follow'
 };
+console.log(requestOptions)
 
 fetch("https://bimit-be.ulbi.ac.id/api/v1/insert_bimbingan", requestOptions)
   .then(response => response.json())
@@ -35,6 +36,7 @@ fetch("https://bimit-be.ulbi.ac.id/api/v1/insert_bimbingan", requestOptions)
 function AmbilResponse(result) {
  alert(result)
 }
+
 
 function resetform(){
 document.getElementById('form').reset();

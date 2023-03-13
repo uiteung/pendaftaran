@@ -1,22 +1,31 @@
-const button = document.querySelector('button');
+const button = document.querySelector('form');
 
 button.addEventListener('submit', (e) => {
   e.preventDefault();
 
+ 
+
   const data = {
-    // nama: document.getElementById('nama').value,
     npm: document.getElementById('npm').value,
-    // url: document.getElementById('url').value,
-    // topik: document.getElementById('topik').value,
-    // abstrak: document.getElementById('abstrak').value,
+    pembimbing1: document.getElementById('pembimbing1').value,
+    pembimbing2: document.getElementById('pembimbing2').value,
     tahun_id: document.getElementById('tahun_id').value,
     judul: document.getElementById('judul').value,
-    prodi_id: document.getElementById('prodi_id').value,
-    partner: document.getElementById('partner').value,
     tipe_bimbingan: document.getElementById('tipe_bimbingan').value,
-    pembimbing1: document.getElementById('pembimbing1').value,
-    pembimbing2: document.getElementById('pembimbing2').value
+    partner: document.getElementById('partner').value
   };
+
+  const npmRegex = /^[0-9]+$/;
+  if (!npmRegex.test(data.npm)) {
+    alert("NPM harus diisi dengan angka!");
+    return;
+  }
+
+  const isDataValid = Object.values(data).every(val => val.trim() !== '');
+  if (!isDataValid) {
+    alert('Mohon lengkapi semua field terlebih dahulu!');
+    return;
+  }
 
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -28,10 +37,19 @@ button.addEventListener('submit', (e) => {
     redirect: 'follow'
   };
 
-  console.log(requestOptions);
-
-  fetch("http://bimit-be.ulbi.ac.id/api/v1/create_bimbingan", requestOptions)
-    .then(response => response.json())
-    .then(result => console.log(result), alert("data inserted"))
-    .catch(error => console.log('error', error));
-})
+  fetch("https://bimit-be.ulbi.ac.id/api/v1/insert_bimbingan", requestOptions)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Terjadi kesalahan saat mengirim data ke server!');
+    }
+    return response.json();
+  })
+  .then(result => {
+    console.log(result);
+    alert('Data berhasil disimpan!');
+  })
+  .catch(error => {
+    console.log('error', error);
+    alert('Terjadi kesalahan: ' + error.message);
+  });
+});
