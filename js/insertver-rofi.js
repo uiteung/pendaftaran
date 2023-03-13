@@ -25,7 +25,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://bimit-be.ulbi.ac.id/api/v1/create_bimbingan", requestOptions)
+fetch("https://bimit-be.ulbi.ac.id/api/v1/insert_bimbingan", requestOptions)
   .then(response => response.json())
   .then(result => AmbilResponse(result))
   .catch(error => console.log('error', error));
