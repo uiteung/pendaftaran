@@ -17,6 +17,7 @@ formData.forEach(function(value, key){
     object;
     object[key] = value;
 });
+console.log(object)
 
 var requestOptions = {
   method: 'POST',
