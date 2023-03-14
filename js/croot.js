@@ -2,8 +2,8 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 let token = getCookie("login");
-button.addEventListener('submit', (e) => {
-    e.preventDefault();
+function pushbutton(){
+    
 
     let url = "https://bimit-be.ulbi.ac.id/api/v1/insert_bimbingan";
     const data = {
@@ -23,5 +23,5 @@ button.addEventListener('submit', (e) => {
 
     postWithToken(url, "Login",token, data, AmbilResponse)
 
-});  
+};  
 
