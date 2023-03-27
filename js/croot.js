@@ -25,3 +25,6 @@ function pushbutton(){
 
 };  
 
+onClick("button", pushbutton);
+
+
