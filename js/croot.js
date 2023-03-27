@@ -13,7 +13,10 @@ function pushbutton(){
         tahun_id: document.getElementById('tahun_id').value,
         judul: document.getElementById('judul').value,
         tipe_bimbingan: document.getElementById('tipe_bimbingan').value,
-        partner: document.getElementById('partner').value
+        partner: document.getElementById('partner').value,
+        linkgd: document.getElementById('linkgd').value,
+        topik: document.getElementById('topik').value,
+        abstrak: document.getElementById('abstrak').value
     };
 
     function AmbilResponse(result) {
