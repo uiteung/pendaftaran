@@ -25,8 +25,23 @@ function pushbutton(){
     }
 
     postWithToken(url, "Login",token, data, AmbilResponse)
-
+    const npmRegex = /^[0-9]+$/;
+    if (!npmRegex.test(data.npm)) {
+      alert("NPM harus diisi dengan angka!");
+      return;
+    }
+  
+    const isDataValid = Object.values(data).every(val => val.trim() !== '');
+    if (!isDataValid) {
+      alert('Mohon lengkapi semua field terlebih dahulu!');
+      return;
+    }
+  
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 };  
+
+
 
 onClick("button", pushbutton);
 
