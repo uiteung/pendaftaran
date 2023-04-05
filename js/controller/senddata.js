@@ -26,7 +26,7 @@ export function pushButton(){
     }
 
     const npmRegex = /^[0-9]+$/;
-    if (!npmRegex.test(data.npm)) {
+    if (!npmRegex.test(data.partner)) {
       alert("NPM harus diisi dengan angka!");
       return;
     }
