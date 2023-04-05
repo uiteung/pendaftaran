@@ -31,7 +31,7 @@ export function pushButton(){
       return;
     }
   
-    const isDataValid = Object.values(data).every(val => val.trim() !== '');
+    const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
     if (!isDataValid) {
       alert('Mohon lengkapi semua field terlebih dahulu!');
       return;
