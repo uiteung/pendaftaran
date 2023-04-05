@@ -1,5 +1,5 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
-import { getValue } from "https://jscroot.github.io/element/croot.js";
+import { getValue,hide } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export let token = getCookie("login");
@@ -22,7 +22,7 @@ export function pushButton(){
 
     function AmbilResponse(result) {
         console.log(result);
-        alert('Data berhasil disimpan!');
+        alert(result.status);
     }
 
     const npmRegex = /^[0-9]+$/;
@@ -37,6 +37,8 @@ export function pushButton(){
       return;
     }else{
         postWithToken(url, "Login",token, data, AmbilResponse);
+        hide('formjancuk');
+
 
     }
 
