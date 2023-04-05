@@ -9,7 +9,6 @@ export function pushButton(){
 
     let url = "https://bimit-be.ulbi.ac.id/api/v1/insert_bimbingan";
     const data = {
-        npm: getValue('npm'),
         pembimbing1: getValue('pembimbing1'),
         pembimbing2: getValue('pembimbing2'),
         tahun_id: getValue('tahun_id'),
