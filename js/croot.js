@@ -3,7 +3,7 @@ import {pushButton,token} from './controller/senddata.js';
 
 
 if (token === "") {
-  document.URL("https://iteung.ulbi.ac.id");
+  window.location.replace("https://iteung.ulbi.ac.id");
 }
 
 
