@@ -15,7 +15,7 @@ export function pushButton(){
         judul: getValue('judul'),
         tipe_bimbingan: getValue('tipe_bimbingan'),
         partner: getValue('partner'),
-        linkgd: getValue('linkgd'),
+        link_gd: getValue('linkgd'),
         topik: getValue('topik'),
         abstrak: getValue('abstrak')
     };
@@ -37,6 +37,7 @@ export function pushButton(){
       return;
     }else{
         postWithToken(url, "Login",token, data, AmbilResponse);
+
     }
 
 };  
