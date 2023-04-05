@@ -4,6 +4,15 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export let token = getCookie("login");
 
+export function cekTipeBimbingan(){
+    let tb=getValue("tipe_bimbingan");
+    if (tb==="ta" || tb === "i1" || tb === "i2"){
+        hide("partner");
+    }
+  
+}
+
+
 export function pushButton(){
     
 

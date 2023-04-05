@@ -1,5 +1,5 @@
-import {onClick} from 'https://jscroot.github.io/element/croot.js';
-import {pushButton,token} from './controller/senddata.js';
+import {onClick,onChange} from 'https://jscroot.github.io/element/croot.js';
+import {pushButton,token,cekTipeBimbingan} from './controller/senddata.js';
 
 
 if (token === "") {
@@ -8,5 +8,7 @@ if (token === "") {
 
 
 onClick("button", pushButton);
+
+onChange("tipe_bimbingan",cekTipeBimbingan );
 
 
