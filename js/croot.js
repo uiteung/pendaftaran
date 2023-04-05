@@ -1,5 +1,5 @@
 import {onClick} from 'https://jscroot.github.io/element/croot.js';
-import {pushbutton} from './controller/senddata.js';
+import {pushButton} from './controller/senddata.js';
 
 let token = getCookie("login");
 
@@ -8,6 +8,6 @@ if (token === "") {
 }
 
 
-onClick("button", pushbutton);
+onClick("button", pushButton);
 
 
