@@ -14,7 +14,7 @@ export function pushButton(){
         tahun_id: getValue('tahun_id'),
         judul: getValue('judul'),
         tipe_bimbingan: getValue('tipe_bimbingan'),
-        partner: getValue('partner'),
+        partner: parseInt(getValue('partner')),
         link_gd: getValue('linkgd'),
         topik: getValue('topik'),
         abstrak: getValue('abstrak')
