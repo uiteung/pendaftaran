@@ -41,7 +41,9 @@ export function pushButton(){
     
     if (data.partner.trim() === '') {
         data.partner = '-';
-      }
+      }else {
+        data.partner = data.partner.trim(); 
+    }
    
     
     if (!isDataValid) {
@@ -60,7 +62,7 @@ export function pushButton(){
     //   return;
     // }
 
-    
+
      //const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
 
 };  
