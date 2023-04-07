@@ -42,7 +42,9 @@ export function pushButton(){
     //   return;
     // }
     const isDataValid = data.pembimbing1 && data.pembimbing2 && data.tahun_id && data.judul && data.tipe_bimbingan && data.link_gd && data.topik && data.abstrak;
-
+    if (data.partner.trim() === '') {
+        data.partner = '-';
+      }
     //const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
     
     if (!isDataValid) {
