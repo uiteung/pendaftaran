@@ -57,6 +57,17 @@ export function pushButton(){
       alert('Mohon lengkapi semua field terlebih dahulu!');
       return;
     }else{
+        const data = {
+            pembimbing1,
+            pembimbing2,
+            tahun_id,
+            judul,
+            tipe_bimbingan,
+            partner,
+            link_gd: linkgd,
+            topik,
+            abstrak
+        };
         postWithToken(url, "Login",token, data, AmbilResponse);
         hide('formjancuk');
 
