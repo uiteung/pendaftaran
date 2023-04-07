@@ -29,10 +29,7 @@ export function pushButton(){
         link_gd: getValue('linkgd'),
         topik: getValue('topik'),
         abstrak: getValue('abstrak')
-
-       
-    }; 
-   
+    };
 
     function AmbilResponse(result) {
         console.log(result);
@@ -45,37 +42,15 @@ export function pushButton(){
     //   return;
     // }
   
-    // const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
-    // if (!isDataValid) {
-    //   alert('Mohon lengkapi semua field terlebih dahulu!');
-    //   return;
-    // }else{
-    //     postWithToken(url, "Login",token, data, AmbilResponse);
-    //     hide('formjancuk');
-
-
-    // }
-
-    const isDataValid = pembimbing1 && pembimbing2 && tahun_id && judul && tipe_bimbingan && linkgd && topik && abstrak;
+    const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
     if (!isDataValid) {
-        alert('Mohon lengkapi semua field terlebih dahulu!');
-        return;
-    } else {
-        const data = {
-            pembimbing1,
-            pembimbing2,
-            tahun_id,
-            judul,
-            tipe_bimbingan,
-            partner,
-            link_gd: linkgd,
-            topik,
-            abstrak
-        };
-        postWithToken(url, "Login", token, data, AmbilResponse);
+      alert('Mohon lengkapi semua field terlebih dahulu!');
+      return;
+    }else{
+        postWithToken(url, "Login",token, data, AmbilResponse);
         hide('formjancuk');
-    }
 
-    
+
+    }
 
 };  
