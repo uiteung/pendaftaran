@@ -32,8 +32,9 @@ export function pushButton(){
     };
 
     function AmbilResponse(result) {
-        console.log(result);
-        alert(result.status);
+        
+        setInner('formjancuk', result.status);
+
     }
 
    
@@ -50,9 +51,7 @@ export function pushButton(){
       alert('Mohon lengkapi semua field terlebih dahulu!');
       return;
     }else{
-        
         postWithToken(url, "Login",token, data, AmbilResponse);
-        hide('formjancuk');
 
 
     }
