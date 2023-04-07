@@ -47,7 +47,7 @@ export function pushButton(){
    
     
     if (!isDataValid) {
-        setInner('Mohon lengkapi semua field terlebih dahulu!');
+        setInner("error-message","Mohon lengkapi semua field terlebih dahulu!");
       return;
     }else{
         
