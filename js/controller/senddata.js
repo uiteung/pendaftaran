@@ -33,7 +33,7 @@ export function pushButton(){
 
     function AmbilResponse(result) {
         
-        setInner('formjancuk', result.status);
+        setInner('alert', result.status);
 
     }
 
@@ -52,7 +52,7 @@ export function pushButton(){
       return;
     }else{
         postWithToken(url, "Login",token, data, AmbilResponse);
-
+        hide("formjancuk");
 
     }
      // const npmRegex = /^[0-9]+$/;
