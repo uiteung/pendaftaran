@@ -8,6 +8,7 @@ export function cekTipeBimbingan(){
     let tb=getValue("tipe_bimbingan");
     if (tb==="ta" || tb === "i1" || tb === "i2"){
         hide("partner");
+        show("pembimbing2");
     }else{
         hide("pembimbing2");
         show("partner");
