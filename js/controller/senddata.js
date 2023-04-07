@@ -32,7 +32,7 @@ export function pushButton(){
 
        
     }; 
-    if (!pembimbing1 || !pembimbing2 || !tahun_id || !judul || !tipe_bimbingan || !link_gd || !topik || !abstrak) {
+    if (!pembimbing1 || !pembimbing2 || !tahun_id || !judul || !tipe_bimbingan || !linkgd || !topik || !abstrak) {
         alert('Mohon lengkapi semua field terlebih dahulu!');
         return;
     }
