@@ -36,11 +36,11 @@ export function pushButton(){
         alert(result.status);
     }
 
-    const npmRegex = /^[0-9]+$/;
-    if (!npmRegex.test(data.partner)) {
-      alert("NPM harus diisi dengan angka!");
-      return;
-    }
+    // const npmRegex = /^[0-9]+$/;
+    // if (!npmRegex.test(data.partner)) {
+    //   alert("NPM harus diisi dengan angka!");
+    //   return;
+    // }
   
     const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
     if (!isDataValid) {
