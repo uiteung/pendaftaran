@@ -26,7 +26,7 @@ export function pushButton(){
         judul: getValue('judul'),
         tipe_bimbingan: getValue('tipe_bimbingan'),
         partner: getValue('partner'),
-        link_gd: getValue('linkgd'),
+        link_gd: getValue('link_gd'),
         topik: getValue('topik'),
         abstrak: getValue('abstrak')
     };
@@ -41,8 +41,9 @@ export function pushButton(){
     //   alert("NPM harus diisi dengan angka!");
     //   return;
     // }
-  
-    const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
+    const isDataValid = pembimbing1 && pembimbing2 && tahun_id && judul && tipe_bimbingan && linkgd && topik && abstrak;
+
+    // const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
     if (!isDataValid) {
       alert('Mohon lengkapi semua field terlebih dahulu!');
       return;
