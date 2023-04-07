@@ -26,7 +26,7 @@ export function pushButton(){
         judul: getValue('judul'),
         tipe_bimbingan: getValue('tipe_bimbingan'),
         partner: getValue('partner'),
-        link_gd: getValue('linkgd'),
+        linkgd: getValue('linkgd'),
         topik: getValue('topik'),
         abstrak: getValue('abstrak')
 
