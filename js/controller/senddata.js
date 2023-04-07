@@ -41,24 +41,15 @@ export function pushButton(){
     //   alert("NPM harus diisi dengan angka!");
     //   return;
     // }
-    const isDataValid = pembimbing1 && pembimbing2 && tahun_id && judul && tipe_bimbingan && link_gd && topik && abstrak;
+    const isDataValid = data.pembimbing1 && data.pembimbing2 && data.tahun_id && data.judul && data.tipe_bimbingan && data.link_gd && data.topik && data.abstrak;
 
-    // const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
+    //const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
+    
     if (!isDataValid) {
       alert('Mohon lengkapi semua field terlebih dahulu!');
       return;
     }else{
-        const data = {
-        pembimbing1,
-        pembimbing2,
-        tahun_id,
-        judul,
-        tipe_bimbingan,
-        partner,
-        link_gd,
-        topik,
-        abstrak
-    };
+        
         postWithToken(url, "Login",token, data, AmbilResponse);
         hide('formjancuk');
 
