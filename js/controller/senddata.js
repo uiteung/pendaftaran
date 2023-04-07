@@ -9,6 +9,7 @@ export function cekTipeBimbingan(){
     if (tb==="ta" || tb === "i1" || tb === "i2"){
         hide("partner");
     }else{
+        hide("pembimbing2");
         show("partner");
     }
   
