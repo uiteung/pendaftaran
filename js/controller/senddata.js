@@ -36,16 +36,13 @@ export function pushButton(){
         alert(result.status);
     }
 
-    // const npmRegex = /^[0-9]+$/;
-    // if (!npmRegex.test(data.partner)) {
-    //   alert("NPM harus diisi dengan angka!");
-    //   return;
-    // }
+   
     const isDataValid = data.pembimbing1 && data.pembimbing2 && data.tahun_id && data.judul && data.tipe_bimbingan && data.link_gd && data.topik && data.abstrak;
+    
     if (data.partner.trim() === '') {
         data.partner = '-';
       }
-    //const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
+   
     
     if (!isDataValid) {
       alert('Mohon lengkapi semua field terlebih dahulu!');
@@ -57,5 +54,13 @@ export function pushButton(){
 
 
     }
+     // const npmRegex = /^[0-9]+$/;
+    // if (!npmRegex.test(data.partner)) {
+    //   alert("NPM harus diisi dengan angka!");
+    //   return;
+    // }
+
+    
+     //const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
 
 };  
