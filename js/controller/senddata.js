@@ -45,18 +45,22 @@ export function pushButton(){
     //   return;
     // }
   
-    const isDataValid = Object.values(pembimbing1,
-        pembimbing2,
-        tahun_id,
-        judul,
-        tipe_bimbingan,
-        linkgd,
-        topik,
-        abstrak).every(val => val.toString().trim() !== '');
+    // const isDataValid = Object.values(data).every(val => val.toString().trim() !== '');
+    // if (!isDataValid) {
+    //   alert('Mohon lengkapi semua field terlebih dahulu!');
+    //   return;
+    // }else{
+    //     postWithToken(url, "Login",token, data, AmbilResponse);
+    //     hide('formjancuk');
+
+
+    // }
+
+    const isDataValid = pembimbing1 && pembimbing2 && tahun_id && judul && tipe_bimbingan && linkgd && topik && abstrak;
     if (!isDataValid) {
-      alert('Mohon lengkapi semua field terlebih dahulu!');
-      return;
-    }else{
+        alert('Mohon lengkapi semua field terlebih dahulu!');
+        return;
+    } else {
         const data = {
             pembimbing1,
             pembimbing2,
@@ -68,10 +72,8 @@ export function pushButton(){
             topik,
             abstrak
         };
-        postWithToken(url, "Login",token, data, AmbilResponse);
+        postWithToken(url, "Login", token, data, AmbilResponse);
         hide('formjancuk');
-
-
     }
 
     
