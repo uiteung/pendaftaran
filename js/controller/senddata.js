@@ -29,7 +29,13 @@ export function pushButton(){
         link_gd: getValue('linkgd'),
         topik: getValue('topik'),
         abstrak: getValue('abstrak')
-    };
+
+       
+    }; 
+    if (!pembimbing1 || !pembimbing2 || !tahun_id || !judul || !tipe_bimbingan || !link_gd || !topik || !abstrak) {
+        alert('Mohon lengkapi semua field terlebih dahulu!');
+        return;
+    }
 
     function AmbilResponse(result) {
         console.log(result);
