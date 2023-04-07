@@ -55,7 +55,7 @@ export function pushButton(){
         judul,
         tipe_bimbingan,
         partner,
-        link_gd: linkgd,
+        link_gd,
         topik,
         abstrak
     };
